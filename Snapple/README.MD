@@ -12,6 +12,10 @@ Try it out!
     python snapple_service.py
 ```
 
+Returns
+```
+    The woodpecker can hammer wood up to 16 times per second.
+```
 Integrate it!
 ```
     service = SnappleFactService()
