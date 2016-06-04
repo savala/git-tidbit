@@ -8,4 +8,4 @@ service = SnappleFactService()
 tidbit = service.get_tidbit()
 
 print ""
-print (tidbit, 'green')
+print colored(tidbit, 'green')
