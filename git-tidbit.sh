@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 
-gitfact() {
-    message="${1}"
-    git commit -m "${message}" > /dev/null
-    # python script.py 
-}
+git commit "$@"
 
-if [ $# == 1 ]
-then
-    gitfact
+if [ $? -eq 0 ]; then
+  echo "Success your commit worked. Here's your fun fact"
+  python Snapple/snapple_service.py
 else
-    echo "Error: correct usage is git fact message"
+  echo FAIL
 fi

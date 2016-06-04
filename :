@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+gitfact() {
+    git commit "$@"> /dev/null
+    python Snapple/snapple_service.py
+}
+
+if [ $# == 1 ]
+then
+    gitfact
+else
+    echo "Error: correct usage is git fact message"
+fi
