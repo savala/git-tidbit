@@ -4,7 +4,7 @@ git commit "$@"
 
 if [ $? -eq 0 ]; then
   echo "Success your commit worked. Here's your fun fact"
-  python Snapple/snapple_service.py
+  python git_fact.py
 else
   echo FAIL
 fi
