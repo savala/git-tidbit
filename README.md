@@ -1,20 +1,20 @@
-# git-fact
-Git a fact everytime you commit to a repo
+# git-tidbit
+Git a tidbit everytime you commit to a repo
 
 # Setup
 Clone the repo
 
 ```sh
-git clone https://github.com/savala/git-fact.git
+git clone https://github.com/savala/git-tidbit.git
 ```
 
-Add fact as an alias for git
+Add tidbit as an alias for git
 
 ```sh
-git config --global alias.fact '!sh <path/to/git-feeling>/fact.sh'
+git config --global alias.tidbit '!sh <path/to/git-tidbit>/tidbit.sh'
 
 # Usage
 
 ```sh
-git fact <message>
+git tidbit <message>
 ```
