@@ -6,7 +6,7 @@
 
     usage:
         service = SnappleFactService()
-        service.get_fact()
+        service.get_tidbit()
     returns:
         You burn about 20 calories per hour chewing gum.
 '''
@@ -16,11 +16,11 @@ import urllib2
 
 class SnappleFactService:
 
-    def get_fact(self):
-        facts = self.get_facts()
+    def get_tidbit(self):
+        facts = self.get_tidbits()
         return facts[0]
 
-    def get_facts(self):
+    def get_tidbits(self):
         headers = { 'User-Agent' : 'Mozilla/5.0' }              
         url  = 'http://www.snapple.com/real-facts/cap-view'     
 
@@ -40,6 +40,6 @@ class SnappleFactService:
 
 if __name__=='__main__':
     service = SnappleFactService()
-    fact = service.get_fact()
+    fact = service.get_tidbit()
 
     print fact
