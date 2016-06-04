@@ -15,7 +15,7 @@ Try it out!
 Integrate it!
 ```
     service = SnappleFactService()
-    service.get_fact()
+    service.get_tidbit()
 ```
 
 API
@@ -23,8 +23,8 @@ API
     
 | API       | Description                         | Return Type |
 |-----------|-------------------------------------|-------------|
-| get_fact  | fetches one fact from snapple       | string      |
-| get_facts | fetches multiple facts from snapple | [string]    |
+| get_tidbit  | fetches one fact from snapple       | string      |
+| get_tidbits | fetches multiple facts from snapple | [string]    |
 
 Libraries
 -----------
