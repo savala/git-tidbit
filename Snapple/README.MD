@@ -25,3 +25,11 @@ API
 |-----------|-------------------------------------|-------------|
 | get_fact  | fetches one fact from snapple       | string      |
 | get_facts | fetches multiple facts from snapple | [string]    |
+
+Libraries
+-----------
+
+```
+from bs4 import BeautifulSoup                           
+import urllib2                                          
+```
