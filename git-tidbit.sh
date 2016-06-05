@@ -3,6 +3,6 @@
 git commit "$@"
 
 if [ $? -eq 0 ]; then
-  echo "Success your commit worked. Here's your fun fact"
+  echo "Success! Your commit went through. Here's your fun fact"
   python git_fact.py
 fi

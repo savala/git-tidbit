@@ -1,10 +1,15 @@
-import sys
-sys.path.append('Snapple')
-
+import sys, random
 from termcolor import colored
-from snapple_service import *
 
-service = SnappleFactService()
+sys.path.append('Snapple')
+from snapple_service import *
+from reddit_service import *
+
+if (random.random() < 0.5):
+    service = SnappleFactService()
+else
+    service = RedditTilService()
+
 tidbit = service.get_tidbit()
 
 print ""
