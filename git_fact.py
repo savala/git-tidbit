@@ -7,7 +7,7 @@ from reddit_service import *
 
 if (random.random() < 0.5):
     service = SnappleFactService()
-else
+else:
     service = RedditTilService()
 
 tidbit = service.get_tidbit()
