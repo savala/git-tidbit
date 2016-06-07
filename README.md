@@ -1,7 +1,7 @@
 # git-tidbit
 Git a tidbit everytime you commit to a repo
 
-# Setup
+## Setup
 Clone the repo
 
 ```sh
@@ -12,8 +12,9 @@ Add tidbit as an alias for git
 
 ```sh
 git config --global alias.tidbit '!sh <path/to/git-tidbit>/tidbit.sh'
+```
 
-# Usage
+## Usage
 
 ```sh
 git tidbit <message>
