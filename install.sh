@@ -12,7 +12,7 @@ mkdir $install_directory
 echo "Installing git-tidbit into $absolute_directory"
 cp -rf $current_directory/* $absolute_directory
 
-git config --global alias.tidbit "$absolute_director/git-tidbit.sh"
+git config --global alias.tidbit "!sh $absolute_directory/git-tidbit.sh"
 
 if [ $? -eq 0 ]; then
     echo "Installing Successful!"
