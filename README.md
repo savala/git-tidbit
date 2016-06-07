@@ -1,6 +1,9 @@
 # git-tidbit
 Git a tidbit everytime you commit to a repo
 
+## Dependencies
+
+
 ## Setup
 Clone the repo
 
