@@ -12,6 +12,9 @@ mkdir $install_directory
 echo "Installing git-tidbit into $absolute_directory"
 cp -rf $current_directory/* $absolute_directory
 
+pip install termcolor
+pip install bs4
+
 git config --global alias.tidbit "!sh $absolute_directory/git-tidbit.sh"
 
 if [ $? -eq 0 ]; then
