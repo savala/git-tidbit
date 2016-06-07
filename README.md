@@ -19,5 +19,5 @@ sudo -H ./install.sh
 ## Usage
 
 ```sh
-git tidbit <message>
+git tidbit -m <message>
 ```
