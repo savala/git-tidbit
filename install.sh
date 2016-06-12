@@ -16,7 +16,6 @@ pip install termcolor
 pip install bs4
 
 git config --global alias.tidbit "!sh $absolute_directory/git-tidbit.sh"
-git config --global alias.commit tidbit
 
 if [ $? -eq 0 ]; then
     echo "Installing Successful!"
