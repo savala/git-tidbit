@@ -1,0 +1,27 @@
+#!/usr/bin/python
+
+def cleanup_self():
+  import os, shutil
+  from subprocess import call
+  call(['git', 'config', '--global', '--unset', 'init.templatedir'])
+  call(['git', 'init'])
+  os.remove(os.path.abspath(__file__))
+  sys.exit(0)
+
+try:
+  import sys, random
+  from termcolor import colored
+  from gittidbit import snapple_service, reddit_service
+except:
+  cleanup_self()
+
+if (random.random() < 0.5):
+    service = snapple_service
+else:
+    service = reddit_service
+
+try:
+  tidbit = service.get_tidbit()
+  print colored(tidbit, 'green')
+except:
+  print colored("Failed to retrieve tidbit.", 'red')
