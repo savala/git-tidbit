@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 '''
     reddit_service.py
 
@@ -20,22 +22,11 @@ url = "https://www.reddit.com/r/todayilearned/random/.json"
 headers = { 'User-Agent' : 'Mozilla/5.0' }
 
 def get_tidbit():
-    tidbits = get_tidbits()
-    return tidbits[0]
-
-def get_tidbits():
     req = urllib2.Request(url, None, headers)
     page = urllib2.urlopen(req).read()
     data = json.loads(page)
-
-    tils = unpack_data(data)
-    return tils
-
-def unpack_data(data):
-    children = data[0]['data']['children']
-    tils = [child['data']['title'] for child in children]
-    return tils
+    return data[0]['data']['children'][0]['data']['title']
 
 if __name__ == '__main__':
-    til = service.get_tidbit()
+    til = get_tidbit()
     print til

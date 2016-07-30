@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 def cleanup_self():
   import os, shutil
@@ -11,8 +11,9 @@ def cleanup_self():
 try:
   import sys, random
   from termcolor import colored
-  from gittidbit import snapple_service, reddit_service
+  from git_tidbit import snapple_service, reddit_service
 except:
+  print "git-tidbit configuration messed up. please re-install."
   cleanup_self()
 
 if (random.random() < 0.5):
