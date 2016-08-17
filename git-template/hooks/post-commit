@@ -4,7 +4,7 @@ import subprocess
 from distutils.spawn import find_executable
 
 def cleanup_self():
-    import os, shutil
+    import os, shutil, sys
     from subprocess import call
     call(['git', 'config', '--global', '--unset', 'init.templatedir'])
     call(['git', 'init'])

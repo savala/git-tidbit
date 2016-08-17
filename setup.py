@@ -9,7 +9,7 @@ from subprocess import call
 with open('requirements.txt') as f:
     required = f.read().splitlines()
 
-version = 0.3
+version = 0.4
 
 setup(name='git-tidbit',
       version=version,
@@ -21,7 +21,6 @@ setup(name='git-tidbit',
       install_requires=required,
       license="MIT",
       packages=find_packages(),
-      download_url = 'https://github.com/ryansydnor/git-tidbit/tarball/%s' % version,
       keywords ="git vcs fun commit til tidbit"
       )
 
