@@ -1,27 +1,41 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+
+import subprocess
+from distutils.spawn import find_executable
 
 def cleanup_self():
-  import os, shutil
-  from subprocess import call
-  call(['git', 'config', '--global', '--unset', 'init.templatedir'])
-  call(['git', 'init'])
-  os.remove(os.path.abspath(__file__))
-  sys.exit(0)
+    import os, shutil, sys
+    from subprocess import call
+    call(['git', 'config', '--global', '--unset', 'init.templatedir'])
+    call(['git', 'init'])
+    sys.exit(0)
+
+def __cowsay_installed():
+    try:
+        return find_executable('cowsay') is not None
+    except:
+        return False
 
 try:
-  import sys, random
-  from termcolor import colored
-  from gittidbit import snapple_service, reddit_service
-except:
-  cleanup_self()
+    import git_tidbit
+except Exception as e:
+    print "git-tidbit configuration messed up. please re-install."
+    print e
+    cleanup_self()
 
-if (random.random() < 0.5):
-    service = snapple_service
-else:
-    service = reddit_service
+import sys, random, pkgutil
+from termcolor import colored
+
+all_modules = [module_name for _, module_name, _ in pkgutil.iter_modules(git_tidbit.__path__)]
+module_name = random.choice(all_modules)
+m = __import__('git_tidbit.%s' % module_name, fromlist=['get_tidbit'])
 
 try:
-  tidbit = service.get_tidbit()
-  print colored(tidbit, 'green')
-except:
-  print colored("Failed to retrieve tidbit.", 'red')
+    tidbit = m.get_tidbit()
+    if __cowsay_installed():
+        from pipes import quote
+        tidbit = subprocess.Popen('echo %s | cowsay' % quote(tidbit), shell=True, stdout=subprocess.PIPE).communicate()[0]
+    print colored(tidbit, 'green')
+except Exception as e:
+    print colored("Failed to retrieve tidbit.", 'red')
+    print colored(e, 'red')

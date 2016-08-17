@@ -9,19 +9,19 @@ from subprocess import call
 with open('requirements.txt') as f:
     required = f.read().splitlines()
 
-version = 0.1
+version = 0.4
 
 setup(name='git-tidbit',
       version=version,
       description="Learn something new every time you commit!",
       long_description=''.join(open('README.md', 'rt').readlines()),
-      author="Sai Avala",
-      author_email='sai.avala@utexas.edu',
+      author="Sai Avala, Ryan Sydnor, Quan Zhou",
+      author_email='sai.avala@utexas.edu, ryan.t.sydnor@gmail.com, quanxzhou@gmail.com',
       url='https://github.com/savala/git-tidbit',
       install_requires=required,
+      license="MIT",
       packages=find_packages(),
-      download_url = 'https://github.com/savala/git-tidbit/tarball/%s' % version,
-      keywords = ['git', 'vcs', 'fun', 'commit', 'til']
+      keywords ="git vcs fun commit til tidbit"
       )
 
 def create_git_template():
