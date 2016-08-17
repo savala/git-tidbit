@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 
 '''
-    reddit_service.py
+    reddit.py
 
     fetches a random til from reddit
     ---------
 
     usage:
-        from gittidbit import reddit_service
-        til = reddit_service.get_tidbit()
+        from git_tidbit import reddit_service
+        til = reddit.get_tidbit()
     returns:
         TIL that most of the dogs that have played Lassie are descended from the first dog, named Pal, to play the character.
         When the first non-blood line dog was given the role in 1997 people protested until producers found another descendent
@@ -28,5 +28,4 @@ def get_tidbit():
     return data[0]['data']['children'][0]['data']['title']
 
 if __name__ == '__main__':
-    til = get_tidbit()
-    print til
+    print get_tidbit()

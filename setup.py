@@ -9,7 +9,7 @@ from subprocess import call
 with open('requirements.txt') as f:
     required = f.read().splitlines()
 
-version = 0.2
+version = 0.3
 
 setup(name='git-tidbit',
       version=version,

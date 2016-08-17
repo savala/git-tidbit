@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 
 '''
-    snapple_service.py
+    snapple.py
 
     fetches a random fact from snapple
     ---------
 
     usage:
-        from git_tidbit import snapple_service
-        snapple_service.get_tidbit()
+        from git_tidbit import snapple
+        snapple.get_tidbit()
     returns:
         You burn about 20 calories per hour chewing gum.
 '''
@@ -46,5 +46,4 @@ def __dynamic_get_tidbit():
 
 
 if __name__=='__main__':
-    fact = get_tidbit()
-    print fact
+    print get_tidbit()

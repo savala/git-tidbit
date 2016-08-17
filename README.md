@@ -1,4 +1,5 @@
 # git-tidbit
+
 Git a tidbit everytime you successfully commit to a repo.
 
 ![Showcase](https://github.com/savala/git-tidbit/blob/master/screenshots/screenshot.png)
@@ -8,6 +9,8 @@ Git a tidbit everytime you successfully commit to a repo.
 pip install git-tidbit
 ```
 
+*If you have trouble on OS X due to permissions, try out `pip install --user git-tidbit`
+
 Once installed, you'll need to run `git init` in your existing repositories to pull in our
 post-commit hook. If you'd like to do this for all of your existing repos, use the following:
 
@@ -15,7 +18,7 @@ post-commit hook. If you'd like to do this for all of your existing repos, use t
 
 #Uninstall
 
-Once uninstalled, git-tidbit will clean up after itself.
+Once uninstalled, git-tidbit will clean up after itself. You can double check it's cleanliness by looking at your git config for the `init.templatedir` entry.
 
 #Develop
 
@@ -40,89 +43,29 @@ Use your normal git workflow. Whenever you commit, you'll learn something new!
 git commit -m "I'm really just doing this to get a snapple fact"
 ```
 
+# Tidbit Sources
 
-### Reddit
+All tidbit modules **must** implement a `get_tidbit` function
+that returns a string. They are free to implement that functionality however they please~
 
-Reddit TIL repository
-=========
-
+## Reddit
 Reddit service fetches a random TIL (Today I learned)
 
+## Snapple
+Random snapple cap fact
 
-Usage
-------
+## Fortune
 
-Try it out!
-```
-    python reddit_service.py
-```
-
-Returns:
-```
-    TIL of James Allen, a highwayman who upon his death requested that a copy of his memoir be bound in his skin and given to John Fenno Jr., the man who put him in jail after trying to rob him. According to Allen it was meant as a token of his respect to the man who fought back and stood up to him.
-```
-
-Integrate it!
-```
-    service = SnappleFactService()
-    service.get_tidbit()
-```
-
-API
----------
-
-| API         | Description                         | Return Type |
-|-------------|-------------------------------------|-------------|
-| get_tidbit  | fetches one TIL from reddit         | string      |
-| get_tidbits | fetches multiple tils from snapple  | [string]    |
-
-Libraries
------------
+You'll need `fortune` installed. You can get it with your favorite package manager:
 
 ```
-import urllib2
-import json
+brew install fortune
+yum install fortune
+apt-get install fortune fortune-mod
+pacman -S fortune-mod
 ```
 
-### Snapple
-
-Snapple fact repository
-=========
-
-Snapple service fetches a random fact from snapple
+####### *Try out cowsay!*
 
 
-Usage
-------
-
-Try it out!
-```
-    python snapple_service.py
-```
-
-Returns
-```
-    The woodpecker can hammer wood up to 16 times per second.
-```
-Integrate it!
-```
-    service = SnappleFactService()
-    service.get_tidbit()
-```
-
-API
----------
-
-| API       | Description                         | Return Type |
-|-----------|-------------------------------------|-------------|
-| get_tidbit  | fetches one fact from snapple       | string      |
-| get_tidbits | fetches multiple facts from snapple | [string]    |
-
-Libraries
------------
-
-```
-from bs4 import BeautifulSoup
-import urllib2
-```
 
