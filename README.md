@@ -34,6 +34,9 @@ Once uninstalled, git-tidbit will clean up after itself. You can double check it
 
 3. `pip install -e .`
 
+4. Add your module to the git_tidbit folder. As long as you implement `get_tidbit` and return a string, things should just work!
+ - *You can test your module in isolation using the `if __name__ == "__main__": print get_tidbit()` convention*
+
 
 # Usage
 
