@@ -9,6 +9,48 @@ Get a tidbit on every commit!
 
 ![Example](http://imgur.com/HnNeahT.gif)
 
+Some example tidbits:
+
+```
+I'm still waiting for the advent of the computer science groupie.
+```
+```
+TIL Ghostbusters (1984) was suppose to have only 3 main ghostbusters (Dan Aykroyd, Eddie Murphy and John Belushi)
+```
+```
+Like fingerprints, everyone's tongue print is different.
+```
+```
+An expert is a person who avoids the small errors as he sweeps on to the
+grand fallacy.
+		-- Benjamin Stolberg
+```
+```
+TIL a law was implemented in 1950's Greece whereby head shaving with manual clippers was used as punishment for young people caught by police, such as teddyboys and prostitutes. Obligatory hair clipping was finally abolished in Greece in 1982.
+```
+```
+There is no opinion so absurd that some philosopher will not express it.
+		-- Marcus Tullius Cicero, "Ad familiares"
+```
+```
+An electric eel can release a charge powerful enough to start 50 cars.
+```
+```
+A man's house is his castle.
+		-- Sir Edward Coke
+```
+```
+A snail breathes through its foot.
+```
+```
+You shouldn't wallow in self-pity.  But it's OK to put your feet in it
+and swish them around a little.
+		-- Guindon
+```
+```
+Ancient Chinese warriors would show off to their enemies before battle, by juggling.
+```
+
 #Install
 ```
 pip install git-tidbit --user
