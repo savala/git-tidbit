@@ -51,7 +51,7 @@ and swish them around a little.
 Ancient Chinese warriors would show off to their enemies before battle, by juggling.
 ```
 
-#Install
+# Install
 ```
 pip install git-tidbit --user
 ```
@@ -64,11 +64,11 @@ post-commit hook. If you'd like to do this for all of your existing repos, use t
 
 `find /my/dev/folders -name .git -type d -prune -execdir git init \;`
 
-#Uninstall
+# Uninstall
 
 Once uninstalled, git-tidbit will clean up after itself. You can double check it's cleanliness by looking at your git config for the `init.templatedir` entry. If your git commits complain, remove the `.git/hooks/post-commit` file.
 
-#Develop
+# Develop
 
 1. Clone the repo
 
@@ -111,7 +111,7 @@ apt-get install fortune fortune-mod
 pacman -S fortune-mod
 ```
 
-####### *Try out cowsay!*
+###### *Try out cowsay!*
 
 
 
